@@ -1,0 +1,158 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f9fafb;
+  color: #111111;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin: 0 0 16px;
+}
+
+h2 {
+  margin: 0 0 16px;
+}
+
+a {
+  color: #dc143c;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+/* Header */
+#SiteHeader {
+  background: white;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 4px solid #dc143c;
+}
+
+#SiteHeader p {
+  margin: 0 0 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+nav a {
+  color: #111111;
+  text-decoration: none;
+  padding: 8px;
+}
+
+nav a:hover {
+  color: #dc143c;
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;      
+  padding: 24px 16px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+/* Grid and cards*/
+.grid {
+  display: grid;                   
+  grid-template-columns: 1fr;     
+  gap: 16px;                    
+  list-style: none;              
+  padding: 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-top: 4px solid #dc143c;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  margin: 0;
+}
+
+/* About page */
+.about-intro {
+  display: flex;                 
+  flex-direction: column;         /* stacks photo and text on mobile */
+  gap: 16px;
+}
+
+.about-intro p {
+  margin: 0;
+}
+
+.photo {
+  background: #e5e7eb;
+  border-radius: 8px;
+  height: 200px;
+  display: flex;                  /* centers the placeholder text */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 16px;
+  background: #111111;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Mobile (320px and below) */
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 24px;
+  }
+  main {
+    padding: 24px 8px;
+  }
+  .card {
+    padding: 16px;
+  }
+  nav a {
+    padding: 8px;
+  }
+}
+
+/* Tablet (768px and up */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-intro {
+    flex-direction: row; 
+  }
+  .photo {
+    width: 240px;
+    flex-shrink: 0;
+  }
+}
+
+/* Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
